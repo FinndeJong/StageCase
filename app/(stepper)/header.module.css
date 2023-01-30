@@ -17,8 +17,22 @@
   max-width: 1280px;
 }
 
-@media (max-width: 480px) {
-  .header-container {
-    flex-direction: column;
+@media only screen and (max-width: 1024px) {
+  .headerContainer {
+    margin-left: 5.2rem;
+    margin-right: 5.2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .headerContainer {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .motorhuisLogo {
+    width: 12rem;
   }
 }

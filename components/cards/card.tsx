@@ -37,7 +37,10 @@ export default function Card({ option }: { option: string }) {
               <div className={styles.cardOverlay}>
                 <div className={styles.cardOverlayWrapper}>
                   <div className={`${styles.circle} ${styles.disabledIcon}`}>
-                    <ClearIcon sx={{ color: "#f3f9ff" }} />
+                    <ClearIcon
+                      className={styles.icons}
+                      sx={{ color: "#f3f9ff" }}
+                    />
                   </div>
                   <h2 className={`--text-header ${styles.disabledText}`}>
                     U:move

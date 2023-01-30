@@ -2,6 +2,7 @@
 import WestIcon from "@mui/icons-material/West";
 import EastIcon from "@mui/icons-material/East";
 import Card from "@/components/cards/card";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -32,11 +33,13 @@ export default function Home() {
               <WestIcon sx={{ fontSize: 15 }} />
               <p className="--text-1">Vorige</p>
             </button>
-            <div>
-              <button className={styles.buttonForward}>
-                <p className="--text-2">Volgende</p>
-                <EastIcon sx={{ fontSize: 15 }} />
-              </button>
+            <div className={styles.navigationForward}>
+              <Link href="/register">
+                <button className={styles.buttonForward}>
+                  <p className="--text-2">Volgende</p>
+                  <EastIcon sx={{ fontSize: 15 }} />
+                </button>
+              </Link>
               <p className={`${styles.price}`}>Jouw keuze €1.519</p>
             </div>
           </div>

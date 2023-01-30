@@ -8,7 +8,11 @@ export default function Header() {
     <>
       <div className={styles.header}>
         <div className={styles.headerContainer}>
-          <Image src={PoweredBy} alt="Powered bye Motorhuis" />
+          <Image
+            className={styles.motorhuisLogo}
+            src={PoweredBy}
+            alt="Powered bye Motorhuis"
+          />
           <Image src={BlueCurrent} alt="Blue current logo" />
         </div>
       </div>

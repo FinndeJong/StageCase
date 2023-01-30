@@ -14,8 +14,31 @@ h1 {
 }
 
 h2,
+h4,
 p {
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: var(--text-1);
+}
+
+/* CSS Variables */
+:root {
+  --background-header: #f4f4f4;
+  --white: #ffffff;
+  --ice-blue: #e5f2ff;
+  --ice-blue-alt: #eef7ff;
+  --dodger-blue: #3399ff;
+  --dodger-blue-alt: #2aa5ff;
+  --title-blue: #093550;
+  --text-blue: #58727e;
+  --form-blue: #003e5b;
 }
 
 /* Font */
@@ -44,7 +67,7 @@ p {
 .--text-2 {
   font-weight: bold;
   font-size: 1.125rem;
-  line-height: 28px;
+  line-height: 24px;
   letter-spacing: 0px;
   color: var(--white);
 }
@@ -70,14 +93,46 @@ p {
   color: #6b9bc4;
 }
 
-/* CSS Variables */
-:root {
-  --background-header: #f4f4f4;
-  --white: #ffffff;
-  --ice-blue: #e5f2ff;
-  --ice-blue-alt: #eef7ff;
-  --dodger-blue: #3399ff;
-  --dodger-blue-alt: #2aa5ff;
-  --title-blue: #093550;
-  --text-blue: #58727e;
+.--form-title {
+  color: var(--form-blue);
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .--text-1 {
+    font-size: 0.875rem;
+    line-height: 20px;
+  }
+  .--text-2 {
+    font-size: 0.875rem;
+    line-height: 20px;
+  }
+  .--text-3 {
+    font-size: 0.875rem;
+  }
+  .--text-4 {
+    font-size: 1.5rem;
+  }
+  .--text-header {
+    font-size: 1rem;
+  }
+}
+
+/* Lelijke MUI overschrijven */
+.MuiOutlinedInput-notchedOutline {
+  border-color: #b9d2ec !important;
+  border-radius: 8px;
+}
+
+.MuiOutlinedInput-notchedOutline:focus {
+  border-color: #3399ff !important;
+}
+
+.MuiOutlinedInput-input {
+  background-color: #fbfdff !important;
+}
+
+.MuiInputLabel-root {
+  color: #b9d2ec !important;
 }

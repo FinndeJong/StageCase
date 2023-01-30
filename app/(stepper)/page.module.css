@@ -1,18 +1,16 @@
 .content {
-  /* display: flex; */
+  display: flex;
+  justify-content: center;
 }
 
 .contentContainer {
+  width: 100%;
   margin-left: 10.4rem;
   margin-right: 10.4rem;
   background-color: var(--ice-blue);
   border-radius: 10px;
   max-width: 1280px;
 }
-
-/* .progress {
-  position: relative;
-} */
 
 .progressBar {
   position: relative;
@@ -55,8 +53,9 @@
 
 .contentWrapper {
   display: flex;
+  justify-content: space-between;
   gap: 4.375rem;
-  padding-top: 4rem;
+  padding-top: 3.5rem;
 }
 
 .options {
@@ -73,7 +72,7 @@
 
 .stepperNavigation {
   position: relative;
-  top: 2.5rem;
+  top: 2.75rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -124,4 +123,64 @@
   margin-left: 2.5rem;
   margin-right: 5.938rem;
   top: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .contentWrapper {
+    padding-top: 0rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.125rem;
+  }
+  .options {
+    margin-right: 0;
+  }
+  .text {
+    margin-top: 2rem;
+  }
+  .buttonForward {
+    margin-right: 2.5rem;
+    gap: 1.156rem;
+  }
+  .buttonBack {
+    margin-right: 2.5rem;
+  }
+  .stepperNavigation {
+    margin-top: -2rem;
+    display: flex;
+    gap: 4.5rem;
+    top: 4.3rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .contentContainer {
+    max-width: 320px;
+  }
+  .stepperNavigation {
+    position: relative;
+    justify-content: center;
+    gap: 1rem;
+    margin-left: 2rem;
+    top: 5.8rem;
+  }
+  .buttonBack,
+  .buttonForward {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .buttonForward {
+    max-width: 7.5rem;
+  }
+  .navigationForward {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .text {
+    width: 16rem;
+  }
+  .progressBar {
+    margin-left: 1rem;
+  }
 }
