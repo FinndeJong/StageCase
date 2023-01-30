@@ -6,9 +6,11 @@ import styles from "./header.module.css";
 export default function Header() {
   return (
     <>
-      <div className={styles.headerContainer}>
-        <Image src={PoweredBy} alt="Powered bye Motorhuis" />
-        <Image src={BlueCurrent} alt="Blue current logo" />
+      <div className={styles.header}>
+        <div className={styles.headerContainer}>
+          <Image src={PoweredBy} alt="Powered bye Motorhuis" />
+          <Image src={BlueCurrent} alt="Blue current logo" />
+        </div>
       </div>
     </>
   );

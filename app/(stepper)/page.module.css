@@ -1,13 +1,60 @@
+.content {
+  /* display: flex; */
+}
+
 .contentContainer {
   margin-left: 10.4rem;
   margin-right: 10.4rem;
   background-color: var(--ice-blue);
   border-radius: 10px;
+  max-width: 1280px;
+}
+
+/* .progress {
+  position: relative;
+} */
+
+.progressBar {
+  position: relative;
+  height: 1rem;
+  width: 17.875rem;
+  background-color: var(--white);
+  border-radius: 9.5px;
+  margin-left: 2.5rem;
+  top: -0.5rem;
+}
+
+.progressBar::after {
+  content: "\a";
+  position: absolute;
+  background-color: var(--dodger-blue);
+  border-radius: 9.5px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  --oneStepProgress: calc(100% / 7);
+  width: calc(var(--oneStepProgress) * 2);
+}
+
+.progressCircle {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--dodger-blue);
+  border-radius: 50px;
+  top: -0.75rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 0.813rem;
+  z-index: 1;
+  --oneStep: calc(17.875rem / 7);
+  left: calc(var(--oneStep) * 2 - 1.25rem);
 }
 
 .contentWrapper {
   display: flex;
-  justify-content: space-between;
   gap: 4.375rem;
   padding-top: 4rem;
 }
@@ -15,12 +62,22 @@
 .options {
   display: flex;
   gap: 1.75rem;
-  margin-right: 2.5rem;
+  margin-right: 5.938rem;
 }
 
 .text {
   width: 22.813rem;
   margin-left: 2.5rem;
+  margin-top: 3.25rem;
+}
+
+.stepperNavigation {
+  position: relative;
+  top: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2.5rem;
 }
 
 .buttonBack,
@@ -34,6 +91,8 @@
   align-items: center;
   padding-left: 1rem;
   padding-right: 1rem;
+  margin-left: 2.5rem;
+  margin-right: 5.938rem;
 }
 
 .buttonBack:hover,
@@ -56,4 +115,13 @@
 .arrowIcon {
   width: 0.813rem;
   height: 0.875rem;
+}
+
+.price {
+  position: relative;
+  color: var(--dodger-blue);
+  font-size: 0.938rem;
+  margin-left: 2.5rem;
+  margin-right: 5.938rem;
+  top: 1rem;
 }

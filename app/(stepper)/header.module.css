@@ -1,12 +1,20 @@
+.header {
+  height: 7.938rem;
+  margin-bottom: 2.75rem;
+  background-color: var(--background-header);
+  display: flex;
+  justify-content: center;
+}
+
 .headerContainer {
+  margin-left: 10.4rem;
+  margin-right: 10.4rem;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 7.938rem;
-  margin-bottom: 1.563rem;
-  padding-left: 10.4rem;
-  padding-right: 10.4rem;
-  background-color: var(--background-header);
+  max-width: 1280px;
 }
 
 @media (max-width: 480px) {
